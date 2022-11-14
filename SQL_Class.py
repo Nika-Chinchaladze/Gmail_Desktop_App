@@ -66,14 +66,3 @@ class SQLDealer:
         curr.execute('''DELETE FROM gmail_text;''')
         conn.commit()
         conn.close()
-
-
-# conn = sqlite3.connect("./sent_box/sent.db")
-# curr = conn.cursor()
-# a = [list(item) for item in curr.execute('''SELECT * FROM gmail_text;''')]
-# conn.commit()
-# conn.close()
-# print(a)
-
-# a = SQLDealer()
-# print(a.delete_sent_data())
