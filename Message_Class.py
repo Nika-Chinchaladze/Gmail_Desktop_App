@@ -1,13 +1,14 @@
 from email.message import EmailMessage
 import ssl
 import smtplib
+import os
 
 
 class SendEmail:
     def __init__(self, **kwargs):
         self.sender = "chincho2022chincho@gmail.com"
         self.receiver = kwargs.get("receiver")
-        self.password = "gvnncbyknjhngelk"
+        self.password = os.environ.get("GMAIL_KEY")
         self.subject = kwargs.get("subject")
         self.body = kwargs.get("body")
 
